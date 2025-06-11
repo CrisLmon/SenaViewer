@@ -1,5 +1,6 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 import edu.misena.senaviewer.model.*;
 
 public class Main {
@@ -45,21 +46,25 @@ public class Main {
             System.out.println("\n5) Menú principal");
             System.out.println("6) Salir");
             option = miScanner.nextInt();
+            break;
          case 2:
             Series.mostrarNombres();
             System.out.println("\n5) Menú principal");
             System.out.println("6) Salir");
             option = miScanner.nextInt();
+            break;
          case 3:
             Book.mostrarNombres();
             System.out.println("\n5) Menú principal");
             System.out.println("6) Salir");
             option = miScanner.nextInt();
+            break;
          case 4:
             Magazine.mostrarNombres();
             System.out.println("\n5) Menú principal");
             System.out.println("6) Salir");
             option = miScanner.nextInt();
+            break;
          case 5:
             System.out.println(menuPrincipal);
             option = miScanner.nextInt();
