@@ -5,11 +5,20 @@ import edu.misena.senaviewer.model.*;
 public class Main {
  public static void main(String[] args) {
    Scanner miScanner = new Scanner(System.in);
+   String menuPrincipal = """
+         _________________________
+         Menú Principal
 
+         1. Movies
+         2. Series
+         3. Books
+         4. Magazines
+         5. Exit
+         _________________________
 
-   System.out.println("\nMenú principal\n\n");
-   System.out.println("1. Movies\n2. Series\n3. Books\n4. Magazines\n5. Exit\n");
-   System.out.println("\nSeleccione una de las opciones.\n");
+         """;
+
+   System.out.println(menuPrincipal);
    
    int option = 0;
    boolean valid = false;
@@ -29,16 +38,31 @@ public class Main {
          miScanner.nextLine();
       }
    }
-   while (option != 5) {
+   while (option != 6) {
       switch (option) {
          case 1:
             Movie.mostrarNombres();
+            System.out.println("\n5) Menú principal");
+            System.out.println("6) Salir");
+            option = miScanner.nextInt();
          case 2:
-            Serie.mostrarNombres
+            Series.mostrarNombres();
+            System.out.println("\n5) Menú principal");
+            System.out.println("6) Salir");
+            option = miScanner.nextInt();
          case 3:
             Book.mostrarNombres();
+            System.out.println("\n5) Menú principal");
+            System.out.println("6) Salir");
+            option = miScanner.nextInt();
          case 4:
             Magazine.mostrarNombres();
+            System.out.println("\n5) Menú principal");
+            System.out.println("6) Salir");
+            option = miScanner.nextInt();
+         case 5:
+            System.out.println(menuPrincipal);
+            option = miScanner.nextInt();
          default:
             break;
       };
